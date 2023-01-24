@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    div.game > button {
+      @apply hover:bg-slate-400 
+               hover:bg-opacity-30                 
+               w-[100px]
+               h-[100px]
+               border-2
+               border-rose-500 
+               rounded-lg;
+    }
+  }
+  
+  @layer base {
+    .item {
+      @apply flex 
+             justify-center 
+             items-center 
+             text-7xl 
+             text-white;
+    }
+  }
