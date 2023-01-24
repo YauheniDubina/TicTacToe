@@ -12,16 +12,16 @@ const winCombinations = [
   [2, 4, 6],
 ];
 
-
-
-try {
-  currentPlayer = prompt("Who starts X or O?");
-  if (currentPlayer != `X` && currentPlayer != `O`) {
-    throw new Error("invalid letter");
+setTimeout(() => {
+  try {
+    currentPlayer = prompt("Who starts X or O?");
+    if (currentPlayer != `X` && currentPlayer != `O`) {
+      throw new Error("invalid letter");
+    }
+  } catch (error) {
+    alert(error);
   }
-} catch (error) {
-  alert(error);
-}
+}, 1000);
 
 const play = (element, index) => {
   element.innerHTML = currentPlayer;
@@ -39,7 +39,7 @@ const play = (element, index) => {
     }
     if (a == b && a == c) {
       alert(`Player ${a} won`);
-      cells.forEach(btn=>btn.disabled=true)
+      cells.forEach((btn) => (btn.disabled = true));
     }
   }
 };
