@@ -14,9 +14,14 @@ const winCombinations = [
 
 
 
-
+try {
   currentPlayer = prompt("Who starts X or O?");
-
+  if (currentPlayer != `X` && currentPlayer != `O`) {
+    throw new Error("invalid letter");
+  }
+} catch (error) {
+  alert(error);
+}
 
 const play = (element, index) => {
   element.innerHTML = currentPlayer;
