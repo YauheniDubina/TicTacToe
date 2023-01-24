@@ -627,8 +627,8 @@ div.game > button:hover {
   gap: 2px;
 }
 
-.bg-\[url\(\'\/assets\/images\/bg\.jpg\'\)\] {
-  background-image: url('/assets/images/bg.jpg');
+.bg-\[url\(\'\.\.\/assets\/images\/bg\.jpg\'\)\] {
+  background-image: url('../assets/images/bg.jpg');
 }
 
 .text-white {
