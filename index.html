@@ -11,10 +11,28 @@
     class="bg-[url('../assets/images/bg.jpg')] w-[100vw] h-[100vh] flex justify-center"
   >
     <div
-      class="container w-full h-full flex flex-col justify-center items-center gap-3"
+      class="container w-full h-full flex flex-col justify-center items-center gap-3 text-center text-white"
     >
-      <h1 class="text-white inline-block">Tic Tac Toe GAME</h1>
-      <div class="game w-[310px] h-[310px] flex flex-wrap gap-[2px]">
+      <table class="w-[310px] h-auto">
+        <thead>
+          <tr>
+            <th>Player X</th>
+            <th>Draw</th>
+            <th>Player O</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="turn w-[310px]"></p>
+      <div
+        class="game w-[310px] h-[310px] flex justify-center flex-wrap gap-[2px]"
+      >
         <button class="item"></button>
         <button class="item"></button>
         <button class="item"></button>
@@ -25,6 +43,11 @@
         <button class="item"></button>
         <button class="item"></button>
       </div>
+      <button
+        class="reset rounded-2xl w-[100px] h-[40px] bg-rose-600 hover:opacity-70 active:shadow-[0px_0px_7px_9px_rgba(2,6,9,0.8)]"
+      >
+        Start again
+      </button>
     </div>
     <script src="index.js"></script>
   </body>
